@@ -1,0 +1,48 @@
+<section class="container">
+    <section class="d-flex justify-content-between mt-4">
+        <h2>Página inicial dos Estoques</h2>
+        <a href="/estoque/create" class="btn btn-primary">Consultar Estoque</a>
+    </section>
+
+</section>
+
+<hr> 
+
+<section class="my-4">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>armazenamento</th>
+                <th>quantidade_disponivel</th>
+                <th>data_entrada</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{!-- o each é um recurso do handlebars que permite que tags sejam repetidas, ele funciona como uma estrutura de repetição --}}
+            {{#each dados}}
+            <tr>
+                <td>{{dataValues.id}}</td>
+                <td>{{dataValues.armazenamento}}</td>
+                <td>{{dataValues.quantidade_disponivel}}</td>
+                <td>{{dataValues.data_entrada}}</td>
+                <td>
+                    <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal{{dataValues.id}}">Excluir</a>
+                </td>
+            </tr>
+
+            {{>modalDelete2 idItem = dataValues.id}}
+
+            {{/each}}
+        </tbody>
+    </table>
+    
+</section>
+<footer style="background-color: #02265b; width: 100%; bottom: 0; position: absolute;" class="text-white py-1">
+  <section style="color: aliceblue;">
+    <div class="text-center">
+      <p class="my-2">Todos os direitos reservados &copy; 2024</p>
+    </div>
+  </section>
+</footer>

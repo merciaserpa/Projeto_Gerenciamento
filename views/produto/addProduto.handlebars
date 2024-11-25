@@ -1,0 +1,48 @@
+<section class="container">
+    <h1 class="text-center">Cadastro de Produtos</h1>
+
+    <form action="/produto/store" method="post">
+        {{!-- 1° Campo : Nome --}}
+        <section class="mb-2">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" class="form-control">
+
+        </section>
+
+        {{!-- 2° CAMPO: Preço --}}
+        <section class="row mb-2">
+            <div class="col-md-6">
+                <label for="preco">Preço</label>
+                <input type="text" name="preco" id="preco" class="form-control">
+            </div>
+
+            </div>
+
+        </section>
+
+        {{!-- 3° CAMPO: Selecionar id do estoque --}}
+        <section class="mb-2">
+            <label for="estoque">Escolha o Estoque</label>
+            <select name="estoque" id="estoque" class="form-select">
+                <option value="">Escolha uma opção...</option>
+                {{#each dados}}
+                <option value="{{dataValues.id}}">{{dataValues.armazenamento}}</option>
+                {{/each}}
+            </select>
+
+        </section>
+
+        {{!-- 4° CAMPO: Botão de Cadastrar --}}
+        <section class="mb-2 d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </section>
+
+    </form>
+</section>
+<footer style="background-color: #02265b; width: 100%; bottom: 0; position: absolute;" class="text-white py-1">
+  <section style="color: aliceblue;">
+    <div class="text-center">
+      <p class="my-2">Todos os direitos reservados &copy; 2024</p>
+    </div>
+  </section>
+</footer>

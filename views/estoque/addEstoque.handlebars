@@ -1,0 +1,45 @@
+<section class="container">
+    <h1 class="text-center">Consultar Estoque</h1>
+
+    <form action="/estoque/store" method="post">
+        {{!-- 1° Campo: Armazenamento --}}
+        <section class="mb-2">
+            <label for="armazenamento">Armazenamento</label>
+            <input type="text" name="armazenamento" id="armazenamento" class="form-control">
+
+        </section>
+
+        {{!-- 2° CAMPO: Quantidade Disponível --}}
+        <section class="row mb-2">
+            <div class="col-md-6">
+                <label for="quantidade_disponivel">Quantidade Disponível</label>
+                <input type="integer" name="quantidade_disponivel" id="quantidade_disponivel" class="form-control">
+            </div>
+
+         {{!-- 3° CAMPO: Data_Entrada --}}
+        <section class="row mb-2">
+            <div class="col-md-6">
+                <label for="data_entrada">Data_Entrada</label>
+                <input type="date" name="data_entrada" id="data_entrada" class="form-control">
+            </div>
+
+            </div>
+
+        </section>
+
+        </section>
+
+        {{!-- 4° CAMPO: Botão de Cadastrar --}}
+        <section class="mb-2 d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </section>
+
+    </form>
+</section>
+<footer style="background-color: #02265b; width: 100%; bottom: 0; position: absolute;" class="text-white py-1">
+  <section style="color: aliceblue;">
+    <div class="text-center">
+      <p class="my-2">Todos os direitos reservados &copy; 2024</p>
+    </div>
+  </section>
+</footer>
